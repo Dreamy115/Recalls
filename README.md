@@ -24,6 +24,7 @@ The command above will remove all armor stands from the first waystone
 
 #### Note
 You can have more than one of the same waystone. If a player attempts a recall to them, they will be teleported to the nearest.
+Be sure to keep your waystones in loaded chunks using `/forceload`!
 
 ## Teleportation
 Players can use `/trigger rc_target set #` (where # is the warp number again) to recall to a specific warp. You can temporarily disable a player's ability to recall setting their `rc_disabled` score to **exactly 1**. Beware, a player has to be in open air (access to sky with no blocks inbetween, even transparent ones) in order to perform a recall. The recall is cancelled if the player takes damage or the sky is blocked within the **delay** time period.
