@@ -5,6 +5,10 @@ Vanilla warps for Minecraft.
 Native: 1.16.4  
 Supported: 1.14.x-1.16.x
 
+### Installation
+Download the code as zip and drop the datapack into `.minecraft/saves/'your world here'/datapacks/`.
+You only need the `data` and `pack.mcmeta`, feel free to remove this README from your download.
+
 ## Warps
 ### Adding a warp
 Every warp is an invincible, invisible armor stand with a specific tag. To create a warp, summon an armor stand:  
