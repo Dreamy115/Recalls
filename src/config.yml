@@ -1,0 +1,18 @@
+# Configuration of system variables
+system:
+  # A string prefixed before each system message
+  prefix: "&8&l[&9&lRecalls&8&l]&r "
+# Configuration of beds aka sethomes
+beds:
+  # Maximum amount of beds per player. '-1' is infinite. Players with 'rc.beds.bypass' aren't affected.
+  total: -1
+  # Maximum amount of beds per player per world. Cannot exceed total
+  world: 3
+# Teleportation config
+teleport:
+  # Enable the fancy-schmancy teleporting effects?
+  effects: true
+  # Amount of ticks (20t = 1s) the players has to wait before actually teleporting
+  delay: 100
+  # Amount of time before a TPA request times out
+  tpa-timeout: 30

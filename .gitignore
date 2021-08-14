@@ -1,0 +1,6 @@
+# Editor files
+.vscode
+.idea
+
+# Output files
+out

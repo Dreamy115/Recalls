@@ -1,0 +1,91 @@
+main: me.Dreamy.Recalls.Main
+name: Recalls
+version: 0.0.1
+description: Recalls and warps with permission-based limitations, survial friendly. Strongly suggest this plugin as a replacement for sethome and tpa, as it makes them less overpowered.
+api-version: 1.16
+author: Dreamy115
+prefix: "Recalls"
+default-permission: op
+commands:
+  rcreload:
+    description: "Reload the plugin"
+  recall:
+    aliases: [rc, warp]
+    description: "/rc <warp>"
+  bed:
+    aliases: [home]
+    description: "/bed <name>"
+  delbed:
+    aliases: [delhome]
+    description: "/delbed <name>"
+  tpa:
+    description: "/tpa <player>"
+  tpdeny:
+    description: "/tpdeny"
+  tpaccept:
+    description: "/tpaccept"
+  setwarp:
+    description: "/setwarp <name>"
+  delwarp:
+    description: "/dewarp <name>"
+permissions:
+  rc.*:
+    description: Everything. Dangerous.
+    children:
+      - rc.tpa.*
+      - rc.warp.*
+      - rc.bed.*
+      - rc.teleport.*
+      - rc.reload
+  rc.reload:
+    description: Reload the plugin data/config
+    default: op
+  rc.tpa.*:
+    description: All TPA permissions
+  rc.tpa.send:
+    default: true
+    description: Request players to teleport to them
+  rc.tpa.accept:
+    description: Be able to be TPA'd to
+    default: true
+  rc.warp.*:
+    description: All warp permissions
+  rc.warp.use.*:
+    description: Use all warps. Replace '*' for specific warp permissions.
+    default: true
+  rc.warp.manage:
+    description: Allow to create and delete warps
+  rc.bed.*:
+    description: All Bed permissions
+    children:
+      - rc.bed.bypass
+      - rc.bed.use
+  rc.bed.use:
+    default: true
+    description: Allows using the bed functionality
+  rc.bed.bypass:
+    description: Bypass bed limits
+  rc.teleport.*:
+    description: All Teleport Override permissions
+    children:
+      - rc.teleport.use
+      - rc.teleport.bypass.*
+  rc.teleport.use:
+    description: Be able to teleport at all using this plugin. Overrides other permissions.
+    default: true
+  rc.teleport.bypass.*:
+    description: Bypass everything
+    default: false
+    children:
+      - rc.teleport.bypass.limit
+      - rc.teleport.bypass.cooldown
+      - rc.teleport.bypass.instant
+  rc.teleport.bypass.limit:
+    default: false
+    description: Ignore the teleport limits set by the config, if any.
+  rc.teleport.bypass.cooldown:
+    default: false
+    description: Ignore the teleport cooldown
+  rc.teleport.bypass.instant:
+    default: false
+    description: Teleport almost instantly
