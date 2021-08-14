@@ -1,6 +1,6 @@
 main: me.Dreamy.Recalls.Main
 name: Recalls
-version: 0.0.1
+version: 1.0.0
 description: Recalls and warps with permission-based limitations, survial friendly. Strongly suggest this plugin as a replacement for sethome and tpa, as it makes them less overpowered.
 api-version: 1.16
 author: Dreamy115
