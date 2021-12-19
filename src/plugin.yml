@@ -1,6 +1,6 @@
 main: me.Dreamy.Recalls.Main
 name: Recalls
-version: 1.0.0
+version: 1.1.0
 description: Recalls and warps with permission-based limitations, survial friendly. Strongly suggest this plugin as a replacement for sethome and tpa, as it makes them less overpowered.
 api-version: 1.16
 author: Dreamy115
@@ -70,6 +70,7 @@ permissions:
     children:
       - rc.teleport.use
       - rc.teleport.bypass.*
+      - rc.teleport.world.*
   rc.teleport.use:
     description: Be able to teleport at all using this plugin. Overrides other permissions.
     default: true
@@ -89,3 +90,5 @@ permissions:
   rc.teleport.bypass.instant:
     default: false
     description: Teleport almost instantly
+  rc.teleport.world.*:
+    description: Teleport to any world

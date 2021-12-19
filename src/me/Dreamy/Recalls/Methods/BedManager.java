@@ -135,7 +135,7 @@ public class BedManager implements Listener {
                                 bed.getLocation().getBlockX() == event.getBed().getLocation().getBlockX() &&
                                 bed.getLocation().getBlockY() == event.getBed().getLocation().getBlockY() &&
                                 bed.getLocation().getBlockZ() == event.getBed().getLocation().getBlockZ() &&
-                                bed.world == event.getBed().getLocation().getWorld().getName()
+                                bed.world.equals(event.getBed().getLocation().getWorld().getName())
                         ) {
                             return;
                         }

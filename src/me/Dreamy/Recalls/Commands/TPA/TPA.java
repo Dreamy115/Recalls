@@ -51,8 +51,8 @@ public class TPA implements CommandExecutor {
 						return false;
 					} else {
 						if(!(
-								player.hasPermission("st.recalls.world.".concat(target.getLocation().getWorld().getName())) ||
-								player.hasPermission("st.recalls.world.*")	
+								player.hasPermission("rc.teleport.world.".concat(target.getLocation().getWorld().getName())) ||
+								player.hasPermission("rc.teleport.world.*")
 							)) {		
 								player.sendMessage(prefix + ChatColor.translateAlternateColorCodes('&', "&cYou cannot TPA to world &8" + target.getLocation().getWorld().getName()));
 								return false;
